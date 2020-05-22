@@ -1,0 +1,3 @@
+https://answers.gazebosim.org//question/7308/parallel-robots-implementing-close-kinematic-chains/
+http://wiki.ros.org/action/edit/Angel_jj/closed_loop_plugin
+pr2 gripper urdf

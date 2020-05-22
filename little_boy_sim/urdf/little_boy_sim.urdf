@@ -1,0 +1,1367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="little_boy_sim">
+  
+  
+  
+  
+  <link
+    name="robot_body">
+    <inertial>
+      <origin
+        xyz="7.73870656298055E-18 6.56352555085725E-05 0.0269020159399907"
+        rpy="0 0 0" />
+      <mass
+        value="4.266" />
+      <inertia
+        ixx="0.0303319746647914"
+        ixy="5.24144068654683E-18"
+        ixz="-1.33999125947965E-18"
+        iyy="0.0311586930426629"
+        iyz="0.000455042564463213"
+        izz="0.0584004816221285" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/robot_body.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/robot_body.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  
+  
+  
+  <link
+    name="shoulder_L">
+    <inertial>
+      <origin
+        xyz="0.0176282080548916 0.0370896616143596 0.00815080609992025"
+        rpy="0 0 0" />
+      <mass
+        value="0.283423667764616" />
+      <inertia
+        ixx="0.000265257278790206"
+        ixy="2.10466843961759E-21"
+        ixz="7.10003077447779E-09"
+        iyy="0.00025941290370256"
+        iyz="-1.9172409284844E-06"
+        izz="0.000144352415869328" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/shoulder_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/shoulder_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="servo_L0"
+    type="continuous">
+    <origin
+      xyz="-0.0850000000000002 0.0399999999999997 0.06"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="robot_body" />
+    <child
+      link="shoulder_L" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  
+  
+  
+  
+  <link
+    name="humerus_L">
+    <inertial>
+      <origin
+        xyz="-0.0749999999999894 1.05748743095546E-14 0.0125000000000634"
+        rpy="0 0 0" />
+      <mass
+        value="0.0519272118011655" />
+      <inertia
+        ixx="3.88070998990834E-06"
+        ixy="-3.04931861011548E-20"
+        ixz="1.10240651048962E-16"
+        iyy="0.000130596276371464"
+        iyz="3.09890737932735E-18"
+        izz="0.000134260622978868" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/humerus_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/humerus_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="servo_L1"
+    type="continuous">
+    <origin
+      xyz="0 0.035 -0.015"
+      rpy="1.5708 -0.7854 -1.5708" />
+    <parent
+      link="shoulder_L" />
+    <child
+      link="humerus_L" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  
+  
+  
+  
+  <link
+    name="ulna_L">
+    <inertial>
+      <origin
+        xyz="0.0545874765333422 8.49320613838245E-15 0.00998412959821515"
+        rpy="0 0 0" />
+      <mass
+        value="0.0623918688838126" />
+      <inertia
+        ixx="4.6899914784395E-06"
+        ixy="-3.58294936688569E-19"
+        ixz="-2.07386312172505E-16"
+        iyy="0.00024547580253465"
+        iyz="3.74503626028023E-18"
+        izz="0.000249905827892741" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/ulna_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.909803921568627 0.443137254901961 0.0313725490196078 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/ulna_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="elbow_L"
+    type="continuous">
+    <origin
+      xyz="-0.15 0 0"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="humerus_L" />
+    <child
+      link="ulna_L" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  
+  
+  
+  
+  <link
+    name="palm_L">
+    <inertial>
+      <origin
+        xyz="0.0124999999981679 0.0120255662044685 0.0177078963676909"
+        rpy="0 0 0" />
+      <mass
+        value="0.0457141016063151" />
+      <inertia
+        ixx="1.44625861769414E-05"
+        ixy="2.33132442790196E-18"
+        ixz="3.04469794115004E-18"
+        iyy="1.14249586142426E-05"
+        iyz="1.96430007002868E-06"
+        izz="1.69837601342722E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/palm_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/palm_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="wrist_L"
+    type="continuous">
+    <origin
+      xyz="0.15 0 0"
+      rpy="2.3514 -1.5708 0" />
+    <parent
+      link="ulna_L" />
+    <child
+      link="palm_L" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  
+  
+  
+  
+  <link
+    name="carpal_outer_L">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 -0.00250000000000006 -0.02"
+        rpy="0 0 0" />
+      <mass
+        value="0.00236128315516283" />
+      <inertia
+        ixx="4.51879117250704E-07"
+        ixy="1.86922169213929E-24"
+        ixz="1.5034575613003E-22"
+        iyy="4.66072959289765E-07"
+        iyz="-9.13614524216283E-22"
+        izz="2.4032521852239E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/carpal_outer_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/carpal_outer_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="servo_L3_outer"
+    type="continuous">
+    <origin
+      xyz="0.0235 0 0.0418"
+      rpy="3.1416 1.0036E-05 0" />
+    <parent
+      link="palm_L" />
+    <child
+      link="carpal_outer_L" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  
+  
+  
+  
+  <link
+    name="finger_outer_L">
+    <inertial>
+      <origin
+        xyz="0.00511306770477256 -0.00249999999999999 -0.00728422296122805"
+        rpy="0 0 0" />
+      <mass
+        value="0.00771718769015707" />
+      <inertia
+        ixx="3.08987109886686E-06"
+        ixy="-4.29058583731255E-21"
+        ixz="-9.12550467894094E-07"
+        iyy="3.56022426581632E-06"
+        iyz="-1.09051356055928E-20"
+        izz="5.0250811565844E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/finger_outer_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/finger_outer_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="finger_outer_joint_L"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.04"
+      rpy="0 1.0036E-05 0" />
+    <parent
+      link="carpal_outer_L" />
+    <child
+      link="finger_outer_L" />
+    <axis
+      xyz="0 1 0" />
+    <mimic
+      joint="servo_L3_outer"
+      multiplier="-1"
+      offset="0" />
+  </joint>
+  
+  
+  
+  
+  <link
+    name="carpal_inner_L">
+    <inertial>
+      <origin
+        xyz="-5.72875080706581E-14 0.00250000000000004 -0.02"
+        rpy="0 0 0" />
+      <mass
+        value="0.00236128315516282" />
+      <inertia
+        ixx="4.51879117250703E-07"
+        ixy="-8.14507915427165E-23"
+        ixz="-1.22524661790364E-18"
+        iyy="4.66072959289764E-07"
+        iyz="8.94330876186141E-22"
+        izz="2.40325218522389E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/carpal_inner_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/carpal_inner_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="servo_L3_inner"
+    type="continuous">
+    <origin
+      xyz="0.0015 0 0.0418"
+      rpy="3.1416 0 3.1416" />
+    <parent
+      link="palm_L" />
+    <child
+      link="carpal_inner_L" />
+    <axis
+      xyz="0 1 0" />
+    <mimic
+      joint="servo_L3_outer"
+      multiplier="1"
+      offset="0" />
+  </joint>
+  
+  
+  
+  
+  <link
+    name="finger_inner_L">
+    <inertial>
+      <origin
+        xyz="0.00511306770475504 0.00250000000000004 -0.00728422296124015"
+        rpy="0 0 0" />
+      <mass
+        value="0.00771718769015706" />
+      <inertia
+        ixx="3.08987109886248E-06"
+        ixy="-9.3719563402258E-22"
+        ixz="-9.12550467900302E-07"
+        iyy="3.56022426581631E-06"
+        iyz="8.49721284245098E-22"
+        izz="5.02508115662819E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/finger_inner_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/finger_inner_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="finger_inner_joint_L"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.04"
+      rpy="0 0 0" />
+    <parent
+      link="carpal_inner_L" />
+    <child
+      link="finger_inner_L" />
+    <axis
+      xyz="0 1 0" />
+    <mimic
+      joint="servo_L3_outer"
+      multiplier="-1"
+      offset="0" />
+  </joint>
+  
+  
+  
+  
+  <link
+    name="shoulder_R">
+    <inertial>
+      <origin
+        xyz="-0.0176282080548916 0.0370896616143596 0.00815080609992024"
+        rpy="0 0 0" />
+      <mass
+        value="0.283423667764616" />
+      <inertia
+        ixx="0.000265257278790206"
+        ixy="-1.18994555132178E-21"
+        ixz="-7.10003077447386E-09"
+        iyy="0.000259412903702561"
+        iyz="-1.91724092848441E-06"
+        izz="0.000144352415869328" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/shoulder_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/shoulder_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="servo_R0"
+    type="continuous">
+    <origin
+      xyz="0.085 0.04 0.06"
+      rpy="1.5708 0 0" />
+    <parent
+      link="robot_body" />
+    <child
+      link="shoulder_R" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  
+  
+  
+  
+  <link
+    name="humerus_R">
+    <inertial>
+      <origin
+        xyz="-0.075 1.38777878078145E-17 -0.0125"
+        rpy="0 0 0" />
+      <mass
+        value="0.0519272118011655" />
+      <inertia
+        ixx="3.88070998990836E-06"
+        ixy="-2.11758236813575E-22"
+        ixz="7.82529906022303E-22"
+        iyy="0.000130596276371464"
+        iyz="-1.15008020717053E-22"
+        izz="0.000134260622978868" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/humerus_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/humerus_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="servo_R1"
+    type="continuous">
+    <origin
+      xyz="0 0.035 -0.015"
+      rpy="1.5707963267949 -0.773478876126905 -1.5707963267949" />
+    <parent
+      link="shoulder_R" />
+    <child
+      link="humerus_R" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  
+  
+  
+  
+  <link
+    name="ulna_R">
+    <inertial>
+      <origin
+        xyz="0.0545874765333507 -5.55111512312578E-17 0.00998412959816891"
+        rpy="0 0 0" />
+      <mass
+        value="0.0623918688838126" />
+      <inertia
+        ixx="4.68999147843948E-06"
+        ixy="1.94605819631676E-19"
+        ixz="-7.48643693300273E-22"
+        iyy="0.00024547580253465"
+        iyz="8.61256928243796E-23"
+        izz="0.000249905827892741" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/ulna_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.909803921568627 0.443137254901961 0.0313725490196078 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/ulna_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="elbow_R"
+    type="continuous">
+    <origin
+      xyz="-0.15 0 0"
+      rpy="3.14159265358979 0 -1.57079632679489" />
+    <parent
+      link="humerus_R" />
+    <child
+      link="ulna_R" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  
+  
+  
+  
+  <link
+    name="palm_R">
+    <inertial>
+      <origin
+        xyz="-0.0125000000000034 0.0120255662044686 0.0177078963677058"
+        rpy="0 0 0" />
+      <mass
+        value="0.045714101606315" />
+      <inertia
+        ixx="1.44625861769414E-05"
+        ixy="-4.2505766661361E-22"
+        ixz="1.65841161362959E-20"
+        iyy="1.14249586142426E-05"
+        iyz="1.96430007002868E-06"
+        izz="1.69837601342722E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/palm_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/palm_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="wrist_R"
+    type="continuous">
+    <origin
+      xyz="0.15 0 0"
+      rpy="-0.802 1.5707963267949 0" />
+    <parent
+      link="ulna_R" />
+    <child
+      link="palm_R" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  
+  
+  
+  
+  <link
+    name="carpal_outer_R">
+    <inertial>
+      <origin
+        xyz="1.46313516857788E-13 0.00249999999999413 -0.0200000000000015"
+        rpy="0 0 0" />
+      <mass
+        value="0.00236128315516283" />
+      <inertia
+        ixx="4.51879117250703E-07"
+        ixy="-1.88263741598242E-24"
+        ixz="3.10786858147573E-18"
+        iyy="4.66072959289764E-07"
+        iyz="1.71510730134042E-23"
+        izz="2.4032521852239E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/carpal_outer_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/carpal_outer_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="servo_R3_outer"
+    type="continuous">
+    <origin
+      xyz="-0.0235 0 0.0418"
+      rpy="3.1416 0 3.1416" />
+    <parent
+      link="palm_R" />
+    <child
+      link="carpal_outer_R" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  
+  
+  
+  
+  <link
+    name="finger_outer_R">
+    <inertial>
+      <origin
+        xyz="0.00511306770476268 0.00249999999999997 -0.00728422296123232"
+        rpy="0 0 0" />
+      <mass
+        value="0.00771718769015706" />
+      <inertia
+        ixx="3.08987109886467E-06"
+        ixy="2.00260426299088E-21"
+        ixz="-9.12550467897191E-07"
+        iyy="3.5602242658163E-06"
+        iyz="6.72497838005611E-21"
+        izz="5.02508115660626E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/finger_outer_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/finger_outer_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="finger_outer_joint_R"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.0400000000000017"
+      rpy="0 0 0" />
+    <parent
+      link="carpal_outer_R" />
+    <child
+      link="finger_outer_R" />
+    <axis
+      xyz="0 1 0" />
+    <mimic
+      joint="servo_R3_outer"
+      multiplier="-1"
+      offset="0" />
+  </joint>
+  
+  
+  
+  
+  <link
+    name="carpal_inner_R">
+    <inertial>
+      <origin
+        xyz="-9.99200722162641E-16 -0.00249999999999446 -0.0200000000000016"
+        rpy="0 0 0" />
+      <mass
+        value="0.00236128315516282" />
+      <inertia
+        ixx="4.51879117250703E-07"
+        ixy="-2.9121904721501E-24"
+        ixz="-6.67803951536478E-23"
+        iyy="4.66072959289763E-07"
+        iyz="5.32497519331012E-24"
+        izz="2.40325218522389E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/carpal_inner_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/carpal_inner_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="servo_R3_inner"
+    type="continuous">
+    <origin
+      xyz="-0.00150000000000346 0 0.0418000000000001"
+      rpy="-3.14159265358978 4.86241093239498E-05 0" />
+    <parent
+      link="palm_R" />
+    <child
+      link="carpal_inner_R" />
+    <axis
+      xyz="0 1 0" />
+    <mimic
+      joint="servo_R3_outer"
+      multiplier="1"
+      offset="0" />
+  </joint>
+  
+  
+  
+  
+  <link
+    name="finger_inner_R">
+    <inertial>
+      <origin
+        xyz="0.0051130677047645 -0.00249999999999825 -0.00728422296123293"
+        rpy="0 0 0" />
+      <mass
+        value="0.00771718769015705" />
+      <inertia
+        ixx="3.08987109886467E-06"
+        ixy="-1.10015021469553E-21"
+        ixz="-9.12550467897194E-07"
+        iyy="3.5602242658163E-06"
+        iyz="-3.8248831524452E-21"
+        izz="5.02508115660627E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/finger_inner_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/finger_inner_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="finger_inner_joint_R"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.0400000000000016"
+      rpy="0 4.86241093239498E-05 0" />
+    <parent
+      link="carpal_inner_R" />
+    <child
+      link="finger_inner_R" />
+    <axis
+      xyz="0 1 0" />
+    <mimic
+      joint="servo_R3_outer"
+      multiplier="-1"
+      offset="0" />
+  </joint>
+  
+  
+  
+  
+  <link
+    name="wheel_L1">
+    <inertial>
+      <origin
+        xyz="0 0.0172695781169907 -1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.082261679681697" />
+      <inertia
+        ixx="2.59481111948719E-05"
+        ixy="1.08436657728232E-21"
+        ixz="2.58493941422821E-22"
+        iyy="4.33989088629492E-05"
+        iyz="3.71855063805022E-22"
+        izz="2.59481111948719E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/wheel_L1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/wheel_L1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="motor_L1"
+    type="continuous">
+    <origin
+      xyz="-0.15 0.12 0.0162"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="robot_body" />
+    <child
+      link="wheel_L1" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  
+  
+  
+  
+  <link
+    name="wheel_L2">
+    <inertial>
+      <origin
+        xyz="0 0.0172695781169906 -2.81553418810606E-19"
+        rpy="0 0 0" />
+      <mass
+        value="0.082261679681697" />
+      <inertia
+        ixx="2.59481111948719E-05"
+        ixy="-1.64633806974664E-22"
+        ixz="5.68686671130207E-22"
+        iyy="4.33989088629492E-05"
+        iyz="6.71217207506519E-22"
+        izz="2.59481111948719E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/wheel_L2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/wheel_L2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="motor_L2"
+    type="continuous">
+    <origin
+      xyz="-0.15 0 0.0162"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="robot_body" />
+    <child
+      link="wheel_L2" />
+    <axis
+      xyz="0 1 0" />
+    <mimic
+      joint="motor_L1"
+      multiplier="1"
+      offset="0" />
+  </joint>
+  
+  
+  
+  
+  <link
+    name="wheel_L3">
+    <inertial>
+      <origin
+        xyz="3.46944695195361E-18 0.0172695781169907 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.082261679681697" />
+      <inertia
+        ixx="2.59481111948719E-05"
+        ixy="4.26103692100804E-25"
+        ixz="-1.55096364853689E-22"
+        iyy="4.33989088629492E-05"
+        iyz="-1.88337849847828E-22"
+        izz="2.59481111948719E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/wheel_L3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/wheel_L3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="motor_L3"
+    type="continuous">
+    <origin
+      xyz="-0.15 -0.12 0.0162"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="robot_body" />
+    <child
+      link="wheel_L3" />
+    <axis
+      xyz="0 1 0" />
+    <mimic
+      joint="motor_L1"
+      multiplier="1"
+      offset="0" />
+  </joint>
+  
+  
+  
+  
+  <link
+    name="wheel_R1">
+    <inertial>
+      <origin
+        xyz="0 0.0172695781169907 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.082261679681697" />
+      <inertia
+        ixx="2.59481111948719E-05"
+        ixy="-7.78153829551795E-22"
+        ixz="-1.76502894377771E-22"
+        iyy="4.33989088629492E-05"
+        iyz="-3.39009326192678E-21"
+        izz="2.59481111948719E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/wheel_R1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/wheel_R1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="motor_R1"
+    type="continuous">
+    <origin
+      xyz="0.15 0.12 0.016"
+      rpy="1.5708 1.5708 0" />
+    <parent
+      link="robot_body" />
+    <child
+      link="wheel_R1" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  
+  
+  
+  
+  <link
+    name="wheel_R2">
+    <inertial>
+      <origin
+        xyz="0 0.0172695781169907 1.07703381086173E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.082261679681697" />
+      <inertia
+        ixx="2.59481111948719E-05"
+        ixy="-1.8968223393661E-21"
+        ixz="3.36042123849668E-22"
+        iyy="4.33989088629492E-05"
+        iyz="-3.80982448472854E-21"
+        izz="2.59481111948719E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/wheel_R2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/wheel_R2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="motor_R2"
+    type="continuous">
+    <origin
+      xyz="0.15 0 0.016"
+      rpy="1.5708 1.5708 0" />
+    <parent
+      link="robot_body" />
+    <child
+      link="wheel_R2" />
+    <axis
+      xyz="0 -1 0" />
+    <mimic
+      joint="motor_R1"
+      multiplier="1"
+      offset="0" />
+  </joint>
+  
+  
+  
+  
+  <link
+    name="wheel_R3">
+    <inertial>
+      <origin
+        xyz="0 0.0172695781169906 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.082261679681697" />
+      <inertia
+        ixx="2.59481111948719E-05"
+        ixy="1.01688968865096E-21"
+        ixz="2.11853960351258E-21"
+        iyy="4.33989088629492E-05"
+        iyz="-4.75511548327406E-21"
+        izz="2.59481111948719E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/wheel_R3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://little_boy_sim/meshes/wheel_R3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="motor_R3"
+    type="continuous">
+    <origin
+      xyz="0.15 -0.12 0.016"
+      rpy="1.5707963267949 1.5707963267949 0" />
+    <parent
+      link="robot_body" />
+    <child
+      link="wheel_R3" />
+    <axis
+      xyz="0 -1 0" />
+    <mimic
+      joint="motor_R1"
+      multiplier="1"
+      offset="0" />
+  </joint>
+</robot>

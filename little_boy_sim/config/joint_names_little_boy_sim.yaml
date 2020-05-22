@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'servo_L0', 'servo_L1', 'elbow_L', 'wrist_L', 'servo_L3_outer', 'finger_outer_joint_L', 'servo_L3_inner', 'finger_inner_joint_L', 'servo_R0', 'servo_R1', 'elbow_R', 'wrist_R', 'servo_R3_outer', 'finger_outer_joint_R', 'servo_R3_inner', 'finger_inner_joint_R', 'motor_L1', 'motor_L2', 'motor_L3', 'motor_R1', 'motor_R2', 'motor_R3', ]

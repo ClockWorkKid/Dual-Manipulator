@@ -1,0 +1,2 @@
+gz sdf -p little_boy_urdf.urdf > model.sdf
+

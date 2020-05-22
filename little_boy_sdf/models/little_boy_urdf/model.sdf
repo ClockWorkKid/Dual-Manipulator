@@ -1,0 +1,1949 @@
+<sdf version='1.6'>
+
+  <model name='little_boy_urdf'>
+
+  
+  
+    <link name='robot_body'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 6.6e-05 0.026902 0 -0 0</pose>
+        <mass>4.266</mass>
+        <inertia>
+          <ixx>0.030332</ixx>
+          <ixy>5.25707e-18</ixy>
+          <ixz>-1.2562e-18</ixz>
+          <iyy>0.0311587</iyy>
+          <iyz>0.000455043</iyz>
+          <izz>0.0584005</izz>
+        </inertia>
+      </inertial>
+      <collision name='robot_body_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/robot_body.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='robot_body_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/robot_body.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+  
+  
+    <link name='wheel_L1'>
+      <pose frame=''>-0.15 0.12 0.0162 -1.57079 -1.57079 3.14159</pose>
+      <inertial>
+        <pose frame=''>0 0.01727 -0 0 -0 0</pose>
+        <mass>0.0822617</mass>
+        <inertia>
+          <ixx>2.59481e-05</ixx>
+          <ixy>1.10233e-21</ixy>
+          <ixz>2.5395e-22</ixz>
+          <iyy>4.33989e-05</iyy>
+          <iyz>4.02941e-22</iyz>
+          <izz>2.59481e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel_L1_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/wheel_L1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel_L1_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/wheel_L1.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='motor_L1' type='revolute'>
+      <child>wheel_L1</child>
+      <parent>robot_body</parent>
+      <axis>
+        <xyz>-1 -4e-06 -4e-06</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='wheel_L2'>
+      <pose frame=''>-0.15 0 0.0162 -1.57079 -1.57079 3.14159</pose>
+      <inertial>
+        <pose frame=''>0 0.01727 -0 0 -0 0</pose>
+        <mass>0.0822617</mass>
+        <inertia>
+          <ixx>2.59481e-05</ixx>
+          <ixy>-1.97993e-22</ixy>
+          <ixz>5.68687e-22</ixz>
+          <iyy>4.33989e-05</iyy>
+          <iyz>6.89557e-22</iyz>
+          <izz>2.59481e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel_L2_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/wheel_L2.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel_L2_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/wheel_L2.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='motor_L2' type='revolute'>
+      <child>wheel_L2</child>
+      <parent>robot_body</parent>
+      <axis>
+        <xyz>-1 -4e-06 -4e-06</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='wheel_L3'>
+      <pose frame=''>-0.15 -0.12 0.0162 -1.57079 -1.57079 3.14159</pose>
+      <inertial>
+        <pose frame=''>0 0.01727 0 0 -0 0</pose>
+        <mass>0.0822617</mass>
+        <inertia>
+          <ixx>2.59481e-05</ixx>
+          <ixy>-4.21207e-23</ixy>
+          <ixz>-1.5025e-22</ixz>
+          <iyy>4.33989e-05</iyy>
+          <iyz>-1.63396e-22</iyz>
+          <izz>2.59481e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel_L3_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/wheel_L3.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel_L3_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/wheel_L3.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='motor_L3' type='revolute'>
+      <child>wheel_L3</child>
+      <parent>robot_body</parent>
+      <axis>
+        <xyz>-1 -4e-06 -4e-06</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='wheel_R1'>
+      <pose frame=''>0.15 0.12 0.016 -1.57079 1.57079 3.14159</pose>
+      <inertial>
+        <pose frame=''>0 0.01727 0 0 -0 0</pose>
+        <mass>0.0822617</mass>
+        <inertia>
+          <ixx>2.59481e-05</ixx>
+          <ixy>-8.08694e-22</ixy>
+          <ixz>-1.55096e-22</ixz>
+          <iyy>4.33989e-05</iyy>
+          <iyz>-3.3616e-21</iyz>
+          <izz>2.59481e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel_R1_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/wheel_R1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel_R1_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/wheel_R1.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='motor_R1' type='revolute'>
+      <child>wheel_R1</child>
+      <parent>robot_body</parent>
+      <axis>
+        <xyz>1 -4e-06 -4e-06</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='wheel_R2'>
+      <pose frame=''>0.15 0 0.016 -1.57079 1.57079 3.14159</pose>
+      <inertial>
+        <pose frame=''>0 0.01727 0 0 -0 0</pose>
+        <mass>0.0822617</mass>
+        <inertia>
+          <ixx>2.59481e-05</ixx>
+          <ixy>-1.88963e-21</ixy>
+          <ixz>3.26551e-22</ixz>
+          <iyy>4.33989e-05</iyy>
+          <iyz>-3.81806e-21</iyz>
+          <izz>2.59481e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel_R2_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/wheel_R2.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel_R2_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/wheel_R2.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='motor_R2' type='revolute'>
+      <child>wheel_R2</child>
+      <parent>robot_body</parent>
+      <axis>
+        <xyz>1 -4e-06 -4e-06</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='wheel_R3'>
+      <pose frame=''>0.15 -0.12 0.016 -1.57079 1.57079 3.14159</pose>
+      <inertial>
+        <pose frame=''>0 0.01727 0 0 -0 0</pose>
+        <mass>0.0822617</mass>
+        <inertia>
+          <ixx>2.59481e-05</ixx>
+          <ixy>9.85451e-22</ixy>
+          <ixz>2.11965e-21</ixz>
+          <iyy>4.33989e-05</iyy>
+          <iyz>-4.7352e-21</iyz>
+          <izz>2.59481e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel_R3_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/wheel_R3.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel_R3_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/wheel_R3.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='motor_R3' type='revolute'>
+      <child>wheel_R3</child>
+      <parent>robot_body</parent>
+      <axis>
+        <xyz>1 -0 -0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='shoulder_L'>
+      <pose frame=''>-0.085 0.04 0.06 1.5708 -0 0</pose>
+      <inertial>
+        <pose frame=''>0.017628 0.03709 0.008151 0 -0 0</pose>
+        <mass>0.283424</mass>
+        <inertia>
+          <ixx>0.000265257</ixx>
+          <ixy>-4.26289e-22</ixy>
+          <ixz>7.10003e-09</ixz>
+          <iyy>0.000259413</iyy>
+          <iyz>-1.91724e-06</iyz>
+          <izz>0.000144352</izz>
+        </inertia>
+      </inertial>
+      <collision name='shoulder_L_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/shoulder_L.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='shoulder_L_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/shoulder_L.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='servo_L0' type='revolute'>
+      <child>shoulder_L</child>
+      <parent>robot_body</parent>
+      <axis>
+        <xyz>0 -4e-06 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='humSupport_L'>
+      <pose frame=''>-0.085 0.03 0.135 1.57079 0.79108 -1.5708</pose>
+      <inertial>
+        <pose frame=''>-0.075 0 0.0125 0 -0 0</pose>
+        <mass>0.0330002</mass>
+        <inertia>
+          <ixx>1.14721e-06</ixx>
+          <ixy>8.04681e-21</ixy>
+          <ixz>-7.00484e-17</ixz>
+          <iyy>7.52735e-05</iyy>
+          <iyz>-9.51672e-19</iyz>
+          <izz>7.62832e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='humSupport_L_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/humSupport_L.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='humSupport_L_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/humSupport_L.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='humSupport_shoulder_joint_L' type='revolute'>
+      <child>humSupport_L</child>
+      <parent>shoulder_L</parent>
+      <axis>
+        <xyz>-1 3e-06 1e-06</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='humerus_L'>
+      <pose frame=''>-0.085 0.055 0.095 1.57079 0.7854 -1.5708</pose>
+      <inertial>
+        <pose frame=''>-0.075 -0 0.0125 0 -0 0</pose>
+        <mass>0.0519272</mass>
+        <inertia>
+          <ixx>3.88071e-06</ixx>
+          <ixy>-4.40466e-17</ixy>
+          <ixz>-1.48711e-17</ixz>
+          <iyy>0.000130596</iyy>
+          <iyz>-4.16768e-19</iyz>
+          <izz>0.000134261</izz>
+        </inertia>
+      </inertial>
+      <collision name='humerus_L_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/humerus_L.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='humerus_L_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/humerus_L.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='servo_L1' type='revolute'>
+      <child>humerus_L</child>
+      <parent>shoulder_L</parent>
+      <axis>
+        <xyz>-1 3e-06 1e-06</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='elbow_L'>
+      <pose frame=''>-0.105 0.161066 0.201066 1.5708 0.004793 1.57079</pose>
+      <inertial>
+        <pose frame=''>-0.007937 0.028223 0.0075 0 -0 0</pose>
+        <mass>0.042762</mass>
+        <inertia>
+          <ixx>1.36758e-05</ixx>
+          <ixy>1.99613e-06</ixy>
+          <ixz>-4.37785e-22</ixz>
+          <iyy>6.30958e-06</iyy>
+          <iyz>-2.2304e-22</iyz>
+          <izz>1.83818e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='elbow_L_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/elbow_L.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='elbow_L_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/elbow_L.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='elbow_humerus_joint_L' type='revolute'>
+      <child>elbow_L</child>
+      <parent>humerus_L</parent>
+      <axis>
+        <xyz>1 -3e-06 -8e-06</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='ulnaSupport_L'>
+      <pose frame=''>-0.104999 0.161305 0.251066 1.57079 -0.785385 -1.57079</pose>
+      <inertial>
+        <pose frame=''>-0.075 -0 -0.0075 0 -0 0</pose>
+        <mass>0.0330002</mass>
+        <inertia>
+          <ixx>1.14721e-06</ixx>
+          <ixy>-4.91915e-17</ixy>
+          <ixz>-4.68498e-17</ixz>
+          <iyy>7.52735e-05</iyy>
+          <iyz>6.29488e-19</iyz>
+          <izz>7.62832e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='ulnaSupport_L_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/ulnaSupport_L.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='ulnaSupport_L_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/ulnaSupport_L.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='ulnaSupport_elbow_joint_L' type='revolute'>
+      <child>ulnaSupport_L</child>
+      <parent>elbow_L</parent>
+      <axis>
+        <xyz>-1 -3e-06 3e-06</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='ulna_L'>
+      <pose frame=''>-0.085 0.161066 0.201066 -1.57079 0.785393 1.57079</pose>
+      <inertial>
+        <pose frame=''>0.054588 0 0.009984 0 -0 0</pose>
+        <mass>0.0623919</mass>
+        <inertia>
+          <ixx>4.68999e-06</ixx>
+          <ixy>-1.60362e-16</ixy>
+          <ixz>1.52892e-16</ixz>
+          <iyy>0.000245476</iyy>
+          <iyz>-2.76302e-18</iyz>
+          <izz>0.000249906</izz>
+        </inertia>
+      </inertial>
+      <collision name='ulna_L_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/ulna_L.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='ulna_L_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/ulna_L.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='ulna_humerus_joint_L' type='revolute'>
+      <child>ulna_L</child>
+      <parent>humerus_L</parent>
+      <axis>
+        <xyz>-1 3e-06 1e-06</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='wrist_L'>
+      <pose frame=''>-0.089999 0.267132 0.095001 1.566 -4e-06 -3.14159</pose>
+      <inertial>
+        <pose frame=''>0.0075 0.012026 0.017708 0 -0 0</pose>
+        <mass>0.0457141</mass>
+        <inertia>
+          <ixx>1.44626e-05</ixx>
+          <ixy>-2.58466e-18</ixy>
+          <ixz>-3.34171e-18</ixz>
+          <iyy>1.1425e-05</iyy>
+          <iyz>1.9643e-06</iyz>
+          <izz>1.69838e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='wrist_L_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/wrist_L.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wrist_L_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/wrist_L.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='wrist_ulna_joint_L' type='revolute'>
+      <child>wrist_L</child>
+      <parent>ulna_L</parent>
+      <axis>
+        <xyz>-1 -0 4e-06</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='metacarpal_1_L'>
+      <pose frame=''>-0.129712 0.287719 0.0951 -1.57559 -4e-06 -3.14158</pose>
+      <inertial>
+        <pose frame=''>-0 -0.0025 -0.02 0 -0 0</pose>
+        <mass>0.00236128</mass>
+        <inertia>
+          <ixx>4.51879e-07</ixx>
+          <ixy>9.61511e-23</ixy>
+          <ixz>-9.49309e-18</ixz>
+          <iyy>4.66073e-07</iyy>
+          <iyz>4.27637e-20</iyz>
+          <izz>2.40325e-08</izz>
+        </inertia>
+      </inertial>
+      <collision name='metacarpal_1_L_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/metacarpal_1_L.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='metacarpal_1_L_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/metacarpal_1_L.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='metacarpal_1_joint_L' type='revolute'>
+      <child>metacarpal_1_L</child>
+      <parent>wrist_L</parent>
+      <axis>
+        <xyz>-4e-06 0.004793 -0.999989</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='metacarpal_2_L'>
+      <pose frame=''>-0.108499 0.308932 0.095202 -1.57559 -4e-06 -3.14158</pose>
+      <inertial>
+        <pose frame=''>-0 -0.0025 -0.02 0 -0 0</pose>
+        <mass>0.00236128</mass>
+        <inertia>
+          <ixx>4.51879e-07</ixx>
+          <ixy>9.35657e-23</ixy>
+          <ixz>-9.4943e-18</ixz>
+          <iyy>4.66073e-07</iyy>
+          <iyz>4.27965e-20</iyz>
+          <izz>2.40325e-08</izz>
+        </inertia>
+      </inertial>
+      <collision name='metacarpal_2_L_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/metacarpal_2_L.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='metacarpal_2_L_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/metacarpal_2_L.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='metacarpal_2_servo_L' type='revolute'>
+      <child>metacarpal_2_L</child>
+      <parent>wrist_L</parent>
+      <axis>
+        <xyz>-4e-06 0.004793 -0.999989</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='finger_A_L'>
+      <pose frame=''>-0.1085 0.348883 0.105393 -1.57559 -4e-06 -3.14159</pose>
+      <inertial>
+        <pose frame=''>0.005113 0.0075 -0.007284 0 -0 0</pose>
+        <mass>0.00771719</mass>
+        <inertia>
+          <ixx>3.08987e-06</ixx>
+          <ixy>9.14134e-20</ixy>
+          <ixz>-9.1255e-07</ixz>
+          <iyy>3.56022e-06</iyy>
+          <iyz>3.02007e-19</iyz>
+          <izz>5.02508e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='finger_A_L_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/finger_A_L.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='finger_A_L_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/finger_A_L.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='finger_A_servo_joint_L' type='revolute'>
+      <child>finger_A_L</child>
+      <parent>metacarpal_2_L</parent>
+      <axis>
+        <xyz>-4e-06 0.004793 -0.999989</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='metacarpal_3_L'>
+      <pose frame=''>-0.086499 0.308932 0.095202 1.5756 1.1e-05 0</pose>
+      <inertial>
+        <pose frame=''>0 0.0025 -0.02 0 -0 0</pose>
+        <mass>0.00236128</mass>
+        <inertia>
+          <ixx>4.51879e-07</ixx>
+          <ixy>9.85992e-23</ixy>
+          <ixz>-2.2998e-18</ixz>
+          <iyy>4.66073e-07</iyy>
+          <iyz>-4.28431e-20</iyz>
+          <izz>2.40325e-08</izz>
+        </inertia>
+      </inertial>
+      <collision name='metacarpal_3_L_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/metacarpal_3_L.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='metacarpal_3_L_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/metacarpal_3_L.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='metacarpal_3_servo_L' type='revolute'>
+      <child>metacarpal_3_L</child>
+      <parent>wrist_L</parent>
+      <axis>
+        <xyz>1.1e-05 -0.004807 0.999988</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='finger_B_L'>
+      <pose frame=''>-0.0865 0.348955 0.090394 1.5756 1.1e-05 0</pose>
+      <inertial>
+        <pose frame=''>0.005113 0.0075 -0.007284 0 -0 0</pose>
+        <mass>0.00771719</mass>
+        <inertia>
+          <ixx>3.08987e-06</ixx>
+          <ixy>-8.53576e-20</ixy>
+          <ixz>-9.1255e-07</ixz>
+          <iyy>3.56022e-06</iyy>
+          <iyz>-2.90191e-19</iyz>
+          <izz>5.02508e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='finger_B_L_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/finger_B_L.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='finger_B_L_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/finger_B_L.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='finger_B_servo_joint_L' type='revolute'>
+      <child>finger_B_L</child>
+      <parent>metacarpal_3_L</parent>
+      <axis>
+        <xyz>1.1e-05 -0.004807 0.999988</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='metacarpal_4_L'>
+      <pose frame=''>-0.065286 0.287719 0.0951 1.5756 1.1e-05 0</pose>
+      <inertial>
+        <pose frame=''>0 0.0025 -0.02 0 -0 0</pose>
+        <mass>0.00236128</mass>
+        <inertia>
+          <ixx>4.51879e-07</ixx>
+          <ixy>9.84943e-23</ixy>
+          <ixz>-2.30037e-18</ixz>
+          <iyy>4.66073e-07</iyy>
+          <iyz>-4.28448e-20</iyz>
+          <izz>2.40325e-08</izz>
+        </inertia>
+      </inertial>
+      <collision name='metacarpal_4_L_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/metacarpal_4_L.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='metacarpal_4_L_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/metacarpal_4_L.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='metacarpal_4_joint_L' type='revolute'>
+      <child>metacarpal_4_L</child>
+      <parent>wrist_L</parent>
+      <axis>
+        <xyz>1.1e-05 -0.004807 0.999988</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='servo_shaft_L'>
+      <pose frame=''>-0.085 -0.015 0.13 -1.57076 -1.458 -1.57083</pose>
+      <inertial>
+        <pose frame=''>0.025 0 0.0025 0 -0 0</pose>
+        <mass>0.0141431</mass>
+        <inertia>
+          <ixx>1.0115e-06</ixx>
+          <ixy>6.89538e-21</ixy>
+          <ixz>4.45394e-21</ixz>
+          <iyy>6.54528e-06</iyy>
+          <iyz>1.25494e-18</iyz>
+          <izz>7.49784e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='servo_shaft_L_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/servo_shaft_L.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='servo_shaft_L_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/servo_shaft_L.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='servo_L2' type='revolute'>
+      <child>servo_shaft_L</child>
+      <parent>shoulder_L</parent>
+      <axis>
+        <xyz>1 4e-06 4e-06</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='triceps_L'>
+      <pose frame=''>-0.08 -0.020628 0.179682 2.04109 -0 4e-06</pose>
+      <inertial>
+        <pose frame=''>0.0025 -0 -0.075 0 -0 0</pose>
+        <mass>0.0163744</mass>
+        <inertia>
+          <ixx>3.74342e-05</ixx>
+          <ixy>3.16113e-19</ixy>
+          <ixz>4.30713e-17</ixz>
+          <iyy>3.69293e-05</iyy>
+          <iyz>-3.62636e-21</iyz>
+          <izz>5.73077e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='triceps_L_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/triceps_L.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='triceps_L_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/triceps_L.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='triceps_shaft_joint_L' type='revolute'>
+      <child>triceps_L</child>
+      <parent>servo_shaft_L</parent>
+      <axis>
+        <xyz>1 4e-06 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='shoulder_R'>
+      <pose frame=''>0.085 0.04 0.06 1.5708 -0 0</pose>
+      <inertial>
+        <pose frame=''>-0.017628 0.03709 0.008151 0 -0 0</pose>
+        <mass>0.283424</mass>
+        <inertia>
+          <ixx>0.000265257</ixx>
+          <ixy>-2.07816e-21</ixy>
+          <ixz>-7.10003e-09</ixz>
+          <iyy>0.000259413</iyy>
+          <iyz>-1.91724e-06</iyz>
+          <izz>0.000144352</izz>
+        </inertia>
+      </inertial>
+      <collision name='shoulder_R_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/shoulder_R.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='shoulder_R_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/shoulder_R.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='servo_R0' type='revolute'>
+      <child>shoulder_R</child>
+      <parent>robot_body</parent>
+      <axis>
+        <xyz>0 -4e-06 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='humSupport_R'>
+      <pose frame=''>0.085 0.03 0.135 1.57079 0.80302 -1.5708</pose>
+      <inertial>
+        <pose frame=''>-0.075 0 -0.0125 0 -0 0</pose>
+        <mass>0.0330002</mass>
+        <inertia>
+          <ixx>1.14721e-06</ixx>
+          <ixy>4.13987e-20</ixy>
+          <ixz>-4.98558e-17</ixz>
+          <iyy>7.52735e-05</iyy>
+          <iyz>-6.93831e-19</iyz>
+          <izz>7.62832e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='humSupport_R_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/humSupport_R.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='humSupport_R_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/humSupport_R.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='humSupport_shoulder_joint_R' type='revolute'>
+      <child>humSupport_R</child>
+      <parent>shoulder_R</parent>
+      <axis>
+        <xyz>-1 3e-06 1e-06</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='humerus_R'>
+      <pose frame=''>-0 0 -0 1.57079 0.79732 -1.5708</pose>
+      <inertial>
+        <pose frame=''>-0.181396 0.027018 -0.0975 0 -0 0</pose>
+        <mass>0.0519272</mass>
+        <inertia>
+          <ixx>3.88071e-06</ixx>
+          <ixy>-1.7671e-16</ixy>
+          <ixz>-3.60954e-17</ixz>
+          <iyy>0.000130596</iyy>
+          <iyz>-1.03886e-18</iyz>
+          <izz>0.000134261</izz>
+        </inertia>
+      </inertial>
+      <collision name='humerus_R_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/humerus_R.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='humerus_R_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/humerus_R.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='servo_R1' type='revolute'>
+      <child>humerus_R</child>
+      <parent>shoulder_R</parent>
+      <axis>
+        <xyz>-1 3e-06 1e-06</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='elbow_R'>
+      <pose frame=''>0.090001 0.159797 0.202326 1.5708 0.004573 1.57079</pose>
+      <inertial>
+        <pose frame=''>-0.007937 0.028223 0.0075 0 -0 0</pose>
+        <mass>0.042762</mass>
+        <inertia>
+          <ixx>1.36758e-05</ixx>
+          <ixy>1.99613e-06</ixy>
+          <ixz>4.05514e-23</ixz>
+          <iyy>6.30958e-06</iyy>
+          <iyz>-2.97818e-24</iyz>
+          <izz>1.83818e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='elbow_R_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/elbow_R.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='elbow_R_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/elbow_R.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='elbow_humerus_joint_R' type='revolute'>
+      <child>elbow_R</child>
+      <parent>humerus_R</parent>
+      <axis>
+        <xyz>1 -3e-06 -8e-06</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='ulnaSupport_R'>
+      <pose frame=''>0.090001 0.160025 0.252325 1.57079 -0.773465 -1.57079</pose>
+      <inertial>
+        <pose frame=''>-0.075 -0 -0.0075 0 -0 0</pose>
+        <mass>0.0330002</mass>
+        <inertia>
+          <ixx>1.14721e-06</ixx>
+          <ixy>-6.73613e-16</ixy>
+          <ixz>-4.58181e-21</ixz>
+          <iyy>7.52735e-05</iyy>
+          <iyz>-4.39979e-22</iyz>
+          <izz>7.62832e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='ulnaSupport_R_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/ulnaSupport_R.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='ulnaSupport_R_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/ulnaSupport_R.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='ulnaSupport_elbow_joint_R' type='revolute'>
+      <child>ulnaSupport_R</child>
+      <parent>elbow_R</parent>
+      <axis>
+        <xyz>-1 -2e-06 3e-06</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='ulna_R'>
+      <pose frame=''>0.080001 0.159797 0.202326 1.57081 0.773473 1.57079</pose>
+      <inertial>
+        <pose frame=''>0.054588 -0 0.014984 0 -0 0</pose>
+        <mass>0.0623919</mass>
+        <inertia>
+          <ixx>4.68999e-06</ixx>
+          <ixy>2.19191e-15</ixy>
+          <ixz>-2.05909e-21</ixz>
+          <iyy>0.000245476</iyy>
+          <iyz>2.21275e-22</iyz>
+          <izz>0.000249906</izz>
+        </inertia>
+      </inertial>
+      <collision name='ulna_R_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/ulna_R.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='ulna_R_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/ulna_R.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='ulna_humerus_joint_R' type='revolute'>
+      <child>ulna_R</child>
+      <parent>humerus_R</parent>
+      <axis>
+        <xyz>1 -8e-06 -6e-06</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='wrist_R'>
+      <pose frame=''>0.105001 0.26712 0.097532 1.55407 -9e-06 3.14159</pose>
+      <inertial>
+        <pose frame=''>0.0075 0.012026 0.017708 0 -0 0</pose>
+        <mass>0.0457141</mass>
+        <inertia>
+          <ixx>1.44626e-05</ixx>
+          <ixy>-2.7581e-19</ixy>
+          <ixz>-3.35792e-19</ixz>
+          <iyy>1.1425e-05</iyy>
+          <iyz>1.9643e-06</iyz>
+          <izz>1.69838e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='wrist_R_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/wrist_R.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wrist_R_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/wrist_R.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='wrist_ulna_joint_R' type='revolute'>
+      <child>wrist_R</child>
+      <parent>ulna_R</parent>
+      <axis>
+        <xyz>-1 5e-06 9e-06</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='metacarpal_1_R'>
+      <pose frame=''>0.129714 0.287704 0.097876 1.58752 1.6e-05 -5e-06</pose>
+      <inertial>
+        <pose frame=''>0 0.0025 -0.02 0 -0 0</pose>
+        <mass>0.00236128</mass>
+        <inertia>
+          <ixx>4.51879e-07</ixx>
+          <ixy>5.02582e-24</ixy>
+          <ixz>2.50182e-17</ixz>
+          <iyy>4.66073e-07</iyy>
+          <iyz>-1.06434e-20</iyz>
+          <izz>2.40325e-08</izz>
+        </inertia>
+      </inertial>
+      <collision name='metacarpal_1_R_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/metacarpal_1_R.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='metacarpal_1_R_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/metacarpal_1_R.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='metacarpal_1_joint_R' type='revolute'>
+      <child>metacarpal_1_R</child>
+      <parent>wrist_R</parent>
+      <axis>
+        <xyz>1.6e-05 -0.016719 0.99986</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='metacarpal_2_R'>
+      <pose frame=''>0.108501 0.308914 0.098231 1.58752 1.6e-05 -5e-06</pose>
+      <inertial>
+        <pose frame=''>0 0.0025 -0.02 0 -0 0</pose>
+        <mass>0.00236128</mass>
+        <inertia>
+          <ixx>4.51879e-07</ixx>
+          <ixy>9.32171e-24</ixy>
+          <ixz>2.50187e-17</ixz>
+          <iyy>4.66073e-07</iyy>
+          <iyz>-1.06489e-20</iyz>
+          <izz>2.40325e-08</izz>
+        </inertia>
+      </inertial>
+      <collision name='metacarpal_2_R_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/metacarpal_2_R.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='metacarpal_2_R_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/metacarpal_2_R.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='metacarpal_2_servo_R' type='revolute'>
+      <child>metacarpal_2_R</child>
+      <parent>wrist_R</parent>
+      <axis>
+        <xyz>1.6e-05 -0.016719 0.99986</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='finger_A_R'>
+      <pose frame=''>0.108501 0.348992 0.093901 1.58752 1.6e-05 -5e-06</pose>
+      <inertial>
+        <pose frame=''>0.005113 0.0075 -0.007284 0 -0 0</pose>
+        <mass>0.00771719</mass>
+        <inertia>
+          <ixx>3.08987e-06</ixx>
+          <ixy>-2.18161e-20</ixy>
+          <ixz>-9.1255e-07</ixz>
+          <iyy>3.56022e-06</iyy>
+          <iyz>-7.33871e-20</iyz>
+          <izz>5.02508e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='finger_A_R_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/finger_A_R.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='finger_A_R_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/finger_A_R.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='finger_A_servo_joint_R' type='revolute'>
+      <child>finger_A_R</child>
+      <parent>metacarpal_2_R</parent>
+      <axis>
+        <xyz>1.6e-05 -0.016719 0.99986</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='metacarpal_3_R'>
+      <pose frame=''>0.086501 0.308914 0.098232 -1.58752 -8e-06 -3.14155</pose>
+      <inertial>
+        <pose frame=''>-0 -0.0025 -0.02 0 -0 0</pose>
+        <mass>0.00236128</mass>
+        <inertia>
+          <ixx>4.51879e-07</ixx>
+          <ixy>6.57002e-23</ixy>
+          <ixz>-9.24351e-18</ixz>
+          <iyy>4.66073e-07</iyy>
+          <iyz>2.30299e-20</iyz>
+          <izz>2.40325e-08</izz>
+        </inertia>
+      </inertial>
+      <collision name='metacarpal_3_R_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/metacarpal_3_R.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='metacarpal_3_R_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/metacarpal_3_R.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='metacarpal_3_servo_R' type='revolute'>
+      <child>metacarpal_3_R</child>
+      <parent>wrist_R</parent>
+      <axis>
+        <xyz>-9e-06 0.016719 -0.99986</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='finger_B_R'>
+      <pose frame=''>0.086499 0.348741 0.108899 -1.58752 -9e-06 3.14159</pose>
+      <inertial>
+        <pose frame=''>0.005113 0.0075 -0.007284 0 -0 0</pose>
+        <mass>0.00771719</mass>
+        <inertia>
+          <ixx>3.08987e-06</ixx>
+          <ixy>8.14764e-20</ixy>
+          <ixz>-9.1255e-07</ixz>
+          <iyy>3.56022e-06</iyy>
+          <iyz>2.58436e-19</iyz>
+          <izz>5.02508e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='finger_B_R_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/finger_B_R.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='finger_B_R_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/finger_B_R.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='finger_B_servo_joint_R' type='revolute'>
+      <child>finger_B_R</child>
+      <parent>metacarpal_3_R</parent>
+      <axis>
+        <xyz>-9e-06 0.016719 -0.99986</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='metacarpal_4_R'>
+      <pose frame=''>0.065288 0.287704 0.097877 -1.58752 -8e-06 -3.14155</pose>
+      <inertial>
+        <pose frame=''>-0 -0.0025 -0.02 0 -0 0</pose>
+        <mass>0.00236128</mass>
+        <inertia>
+          <ixx>4.51879e-07</ixx>
+          <ixy>3.55845e-23</ixy>
+          <ixz>-1.79828e-17</ixz>
+          <iyy>4.66073e-07</iyy>
+          <iyz>2.94665e-20</iyz>
+          <izz>2.40325e-08</izz>
+        </inertia>
+      </inertial>
+      <collision name='metacarpal_4_R_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/metacarpal_4_R.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='metacarpal_4_R_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/metacarpal_4_R.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='metacarpal_4_joint_R' type='revolute'>
+      <child>metacarpal_4_R</child>
+      <parent>wrist_R</parent>
+      <axis>
+        <xyz>-9e-06 0.016719 -0.99986</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='servo_shaft_R'>
+      <pose frame=''>0.085 -0.015 0.13 -1.57077 -1.42971 -1.57082</pose>
+      <inertial>
+        <pose frame=''>0.025 0 -0.0025 0 -0 0</pose>
+        <mass>0.0141431</mass>
+        <inertia>
+          <ixx>1.0115e-06</ixx>
+          <ixy>-3.69253e-21</ixy>
+          <ixz>-1.11707e-21</ixz>
+          <iyy>6.54528e-06</iyy>
+          <iyz>9.007e-19</iyz>
+          <izz>7.49784e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='servo_shaft_R_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/servo_shaft_R.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='servo_shaft_R_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/servo_shaft_R.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='servo_R2' type='revolute'>
+      <child>servo_shaft_R</child>
+      <parent>shoulder_R</parent>
+      <axis>
+        <xyz>1 4e-06 4e-06</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  
+  
+  
+    <link name='triceps_R'>
+      <pose frame=''>0.08 -0.022031 0.179503 2.06938 -1e-06 4e-06</pose>
+      <inertial>
+        <pose frame=''>-0.0025 -0 -0.075 0 -0 0</pose>
+        <mass>0.0163744</mass>
+        <inertia>
+          <ixx>3.74342e-05</ixx>
+          <ixy>9.55611e-20</ixy>
+          <ixz>1.2832e-17</ixz>
+          <iyy>3.69293e-05</iyy>
+          <iyz>-1.67289e-20</iyz>
+          <izz>5.73077e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='triceps_R_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/triceps_R.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='triceps_R_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://little_boy_urdf/meshes/triceps_R.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+    <joint name='triceps_shaft_joint_R' type='revolute'>
+      <child>triceps_R</child>
+      <parent>servo_shaft_R</parent>
+      <axis>
+        <xyz>1 4e-06 1e-06</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  </model>
+</sdf>
